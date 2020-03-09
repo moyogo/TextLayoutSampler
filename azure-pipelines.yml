@@ -1,0 +1,11 @@
+pool:
+  name: Hosted Windows 2019 with VS2019
+  demands:
+  - msbuild
+  - visualstudio
+steps:
+  - task: VSBuild@1
+    inputs:
+      solution: 'TextLayoutSampler.sln'
+      vsVersion: '16.0'
+      createLogFile: true
