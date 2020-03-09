@@ -9,3 +9,8 @@ steps:
       solution: 'TextLayoutSampler.sln'
       vsVersion: '16.0'
       createLogFile: true
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)\TextLayoutSampler.exe'
+      ArtifactName: 'build'
+      publishLocation: 'Container'
